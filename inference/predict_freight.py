@@ -27,7 +27,7 @@ def predict_freight_cost(input_data):
     input_df = pd.DataFrame(input_data)
 
     # 🔥 Ensure correct column order
-    expected_features = ['Quantity', 'InvoiceDollars']
+    expected_features = ['Quantity', 'Invoice Dollars']
     input_df = input_df[expected_features]
     
     input_df['Predicted_Freight'] = model.predict(input_df).round()
