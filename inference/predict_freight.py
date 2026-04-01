@@ -33,9 +33,9 @@ def predict_freight_cost(input_data):
     return input_df
 
 if __name__ == "__main__":
-
-    sample_data = { 
-        "Dollars": [18500, 9000, 3000, 200]
+    sample_data = {
+        "Quantity": [1200],
+        "Dollars": [15000.0]
     }
 
     prediction = predict_freight_cost(sample_data)
