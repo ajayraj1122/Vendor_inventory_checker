@@ -25,18 +25,14 @@ def predict_freight_cost(input_data):
      """
     model = load_model() 
     input_df = pd.DataFrame(input_data)
-
-    # 🔥 Ensure correct column order
-    expected_features = ['Quantity', 'Invoice Dollars']
-    input_df = input_df[expected_features]
-    
     input_df['Predicted_Freight'] = model.predict(input_df).round()
     return input_df
 
 if __name__ == "__main__":
 
-    sample_data = { 
-        "Dollars": [18500, 9000, 3000, 200]
-    }
-    prediction = predict_freight_cost(sample_data)
-    print(prediction)
+     # Example inference run (local testing)
+     sample_data = { 
+          "Dollars": [18500,9000, 3000,200]
+     }
+prediction = predict_freight_cost(sample_data)
+print(prediction)
